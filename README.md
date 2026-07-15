@@ -1,18 +1,22 @@
 # Semantos Cell Engine Forth
 
-A compact Forth implementation of the Semantos cell engine.
+A compact Bitcoin VM in Forth, with Semantos-style cell and capability
+extensions.
 
-This package contains a self-contained 1KB semantic-cell runtime:
+This package contains a small GForth runtime for Bitcoin Script-like execution
+and additional resource/capability machinery:
 
+- a Bitcoin Script data-stack executor with standard opcode coverage
+- BSV-oriented sighash and transaction context helpers
 - packed 1024-byte cells with a 256-byte header and 768-byte payload
 - main and auxiliary 2-PDA stacks for semantic cells
 - linear, affine, relevant, and debug resource rules
 - little-endian cell header accessors
 - type-hash parity helpers
-- BSV-oriented sighash parsing helpers
-- a Bitcoin Script data-stack executor with standard opcode coverage
+- reserved opcode ranges for macros, capabilities, hostcalls, and routing
 
-It is intentionally small: load `bootstrap.fs`, get the cell engine.
+It is intentionally small: load `bootstrap.fs`, get the VM and the cell engine.
+This is not a consensus node implementation.
 
 ## Requirements
 
@@ -95,4 +99,4 @@ abort for now rather than pretending to be complete.
 
 ## License
 
-No license has been selected yet.
+Open BSV License version 4. See [LICENSE](LICENSE).
