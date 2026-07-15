@@ -1,0 +1,20 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  gforth:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install GForth
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gforth
+
+      - name: Run tests
+        run: make test
