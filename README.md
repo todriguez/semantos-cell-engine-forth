@@ -99,4 +99,4 @@ abort for now rather than pretending to be complete.
 
 ## License
 
-Open BSV License version 4. See [LICENSE](LICENSE).
+Apache License, Version 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE).
